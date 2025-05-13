@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasi Pranata Mangsa Jawa</title>
+    <link rel="stylesheet" href="style_pranata_mangsa.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Informasi Pranata Mangsa Jawa</h1>
+        <p class="subtitle">Ketahui mangsa (musim) berdasarkan kalender tradisional Jawa.</p>
+
+        <div class="input-section">
+            <h2>Masukkan Tanggal Masehi</h2>
+            <div class="form-group">
+                <label for="tanggalMasehi">Pilih Tanggal:</label>
+                <input type="date" id="tanggalMasehi" required>
+            </div>
+            <button id="cekMangsaButton">Cek Pranata Mangsa</button>
+        </div>
+
+        <div id="hasil" class="result-section" style="display: none;">
+            <h2 id="hasilJudul"></h2>
+            <div id="infoMangsa">
+                <!-- Detail mangsa akan ditampilkan di sini oleh JavaScript -->
+            </div>
+            <div id="infoSaka"></div>
+        </div>
+
+        <div id="error" class="error-message" style="display: none;"></div>
+    </div>
+
+    <!-- URUTAN PEMUATAN SCRIPT YANG SANGAT PENTING -->
+
+    <!-- 1. Muat file konfigurasi data terlebih dahulu (config_pranata_mangsa.js) -->
+    <!-- File ini berisi DATA_PRANATA_MANGSA dan URUTAN_NAMA_MANGSA -->
+    <!-- yang mungkin dibutuhkan oleh file algoritma dan main. -->
+    <script src="js/config_pranata_mangsa.js"></script>
+
+    <!-- 2. Muat file yang berisi definisi fungsi inti (algoritma_pranata_mangsa.js) -->
+    <!-- File ini mendefinisikan fungsi getPranataMangsa() -->
+    <!-- dan mungkin menggunakan data dari config_pranata_mangsa.js. -->
+    <script src="js/algoritma_pranata_mangsa.js"></script>
+
+    <!-- 3. Muat file utama yang akan menangani interaksi pengguna dan tampilan (main_pranata_mangsa.js) -->
+    <!-- File ini akan memanggil fungsi getPranataMangsa() dari algoritma.js -->
+    <!-- dan juga mungkin menggunakan URUTAN_NAMA_MANGSA dari config.js. -->
+    <script src="js/main_pranata_mangsa.js"></script>
+</body>
+</html>
